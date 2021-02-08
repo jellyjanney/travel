@@ -879,7 +879,7 @@ textarea.form-control:focus{
 .timeline::after{
   content: "";
   display: block;
-  width: 2px;
+  width: 3px;
   height: 100%;
   background-color: #184D47;
   border-radius: 25px;
