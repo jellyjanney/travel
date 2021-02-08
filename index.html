@@ -7,16 +7,33 @@
 
 	<script src="js/jquery-3.5.1.slim.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
 	<link rel="stylesheet" href="css/main.css">
 	<title>Cuesta Garden</title>
 </head>
 <body>
 
-
+<nav class="modal" role="modal" id="slidebar">
+	<ul class="bg-dark p-4">
+		<div class="top">
+			<a href="#home" class="brand w3-text-uppercase"><b>CUESTA</b> GARDEN</a>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div> 
+		<ul class="navbar">
+			<li class="nav-item"><a href="index.html" class="w3-bar-item w3-button">Home</a></li>
+			<li class="nav-item"><a href="news.html" class="w3-bar-item w3-button">News</a></li>
+			<li class="nav-item"><a href="history.html" class="w3-bar-item w3-button">History</a></li>
+			<li class="nav-item"><a href="contact.html" class="w3-bar-item w3-button">Contact</a></li>
+		</ul>
+	</ul>
+</nav>
 <!-- Header -->
 <header id="home" class="menu bg-primary">
 	<!-- Navbar (sit on top) -->
-	<nav for="home" class="bg-primary">
+	<nav for="home" class="bg-primary nav-lg">
 	  <div class=" display-container py-3">
 	  	<div class="row">
 		    <a href="#home" class="brand w3-text-uppercase">
@@ -29,6 +46,21 @@
 				<li class="nav-item"><a href="history.html" class="w3-bar-item w3-button">History</a></li>
 				<li class="nav-item"><a href="contact.html" class="w3-bar-item w3-button">Contact</a></li>
 		    </ul>
+		</div>
+	  </div>
+	</nav>
+	<nav for="mobile" class="bg-primary nav-mb">
+	  <div class=" display-container py-3">
+	  	<div class="row">
+		    <a href="#home" class="brand w3-text-uppercase">
+		    	<b>CUESTA</b> GARDEN
+		    </a> 
+		    <!-- Float links to the right. Hide them on small screens -->
+		    <button class="nav-bar" type="button" data-toggle="modal" data-target="#slidebar"  href="javascript:()">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</div>
 	  </div>
 	</nav>
@@ -114,7 +146,7 @@
 	<div class="bg-primary contact-section section">
 		<div class="display-container">
 			<div class="row">
-				<div class="col-6 col-left">
+				<div class="col-lg-6 col-left">
 					<h2>CUESTA GARDEN</h2>
 					<span>
 						การพัฒนาระบบฐานทรัพยากรท้องถิ่น<br>
@@ -161,7 +193,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-6 col-right flex-row justify-content-space-between footer">
+				<div class="col-lg-6 col-right flex-row justify-content-space-between footer">
 					<ul class="flex-3">
 						<li><h4>Products</h4></li>
 						<li><a href="#">Product 1</a></li>

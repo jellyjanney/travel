@@ -12,27 +12,57 @@
 </head>
 <body>
 
-
-<!-- Header -->
-<header id="home" class="menu bg-primary">
-	<!-- Navbar (sit on top) -->
-	<nav for="home" class="bg-primary">
-	  <div class=" display-container py-3">
-	  	<div class="row">
-		    <a href="index.html" class="brand w3-text-uppercase">
-		    	<b>CUESTA</b> GARDEN
-		    </a> 
-		    <!-- Float links to the right. Hide them on small screens -->
-		    <ul class="navbar">
+    <nav class="modal" role="modal" id="slidebar">
+        <ul class="bg-dark p-4">
+            <div class="top">
+                <a href="#home" class="brand w3-text-uppercase"><b>CUESTA</b> GARDEN</a>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div> 
+            <ul class="navbar">
                 <li class="nav-item"><a href="index.html" class="w3-bar-item w3-button">Home</a></li>
                 <li class="nav-item"><a href="news.html" class="w3-bar-item w3-button">News</a></li>
                 <li class="nav-item"><a href="history.html" class="w3-bar-item w3-button">History</a></li>
                 <li class="nav-item"><a href="contact.html" class="w3-bar-item w3-button">Contact</a></li>
-		    </ul>
-		</div>
-	  </div>
-	</nav>
-</header>
+            </ul>
+        </ul>
+    </nav>
+    <!-- Header -->
+    <header id="home" class="menu bg-primary">
+        <!-- Navbar (sit on top) -->
+        <nav for="home" class="bg-primary nav-lg">
+          <div class=" display-container py-3">
+              <div class="row">
+                <a href="#home" class="brand w3-text-uppercase">
+                    <b>CUESTA</b> GARDEN
+                </a> 
+                <!-- Float links to the right. Hide them on small screens -->
+                <ul class="navbar">
+                    <li class="nav-item"><a href="index.html" class="w3-bar-item w3-button">Home</a></li>
+                    <li class="nav-item"><a href="news.html" class="w3-bar-item w3-button">News</a></li>
+                    <li class="nav-item"><a href="history.html" class="w3-bar-item w3-button">History</a></li>
+                    <li class="nav-item"><a href="contact.html" class="w3-bar-item w3-button">Contact</a></li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        <nav for="mobile" class="bg-primary nav-mb">
+          <div class=" display-container py-3">
+              <div class="row">
+                <a href="#home" class="brand w3-text-uppercase">
+                    <b>CUESTA</b> GARDEN
+                </a> 
+                <!-- Float links to the right. Hide them on small screens -->
+                <button class="nav-bar" type="button" data-toggle="modal" data-target="#slidebar"  href="javascript:()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+          </div>
+        </nav>
+    </header>
 
 <section role="main" class="main">
 	<div class="bg-green h-100 section">
