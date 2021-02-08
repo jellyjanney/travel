@@ -139,10 +139,14 @@ header .row{
 .brand{
   text-align: left;
   letter-spacing: 0.16px;
-  color: #FBF7EA;
+  color: #FBF7EA !important;
 }
+.brand a,
 .brand b{
   color: #FBF7EA;
+}
+.brand:hover{
+  color: #FAD586;
 }
 
 /* Slider */
@@ -214,6 +218,13 @@ header .row{
 .bg-video{
   background-color: rgba(0,0,0,0.15);
   height: 80vh;
+}
+[class*="btn"]:active,
+[class*="btn"]:focus,
+[class*="btn"]:hover,
+[class*="btn"]{
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 
 .categories{
@@ -747,8 +758,13 @@ header .row{
 }
 
 /* Contact */
-.contact-section{
-  height: 100vh;
+.contact-section .socail > li{
+  background-color: #FBF7EA;
+}
+.contact-section .socail > li:active,
+.contact-section .socail > li:focus,
+.contact-section .socail > li:hover{
+  background-color: #FAD586;
 }
 .contact-section .title{
   padding: 60px 0 25px;
@@ -853,6 +869,165 @@ textarea.form-control:focus{
   color: #FAD586 !important;
 }
 
+/* Timeline */
+.timeline{
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-top: 30px;
+}
+.timeline::after{
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  background-color: #184D47;
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  animation-name: flow;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+.timeline li{
+  display: flex;
+  flex: 0 0 100%;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+.timeline li::after{
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid #406A65;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.timeline li::before{
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #96BB7C;
+  border: 2px solid #96BB7C;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.timeline li .time {
+  display: block;
+  width: 20%;
+  flex: 0 0 20%;
+  border: 0px solid rgba(0, 0, 0, 0.16);
+  padding: 15px 50px;
+  text-align: right;
+  align-self: center;
+}
+.timeline li .detail {
+  display: block;
+  width: 70%;
+  flex: 0 0 70%;
+  border: 0px solid rgba(0, 0, 0, 0.16);
+  padding: 15px 15px 15px 50px;
+}
+
+/* Detail */
+.detail-section figure{
+  margin-bottom: 30px;
+  width: 100%;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.16);
+}
+.detail-section .row{
+  flex-direction: row-reverse;
+}
+.detail-section article{
+  width: 75%;
+}
+.detail-section aside{
+  width: 25%;
+  padding-right: 15px;
+}
+.aside-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.aside-list li {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 5px 15px;
+  border: 0px solid rgba(112, 112, 112, 1);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  color: rgba(112, 112, 112, 1);
+  position: relative;
+}
+.aside-list li a{
+  color: rgba(15, 14, 13, 1);
+  display: block;
+  z-index: 2;
+  position: relative;
+}
+.aside-list li::after{
+  content: "";
+  display: block;
+  width: 90%;
+  height: 100%;
+  background-color: rgba(251, 247, 234, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.aside-list li::before{
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(251, 247, 234, 1);
+  position: absolute;
+  top: 5px;
+  right: 17px;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.aside-list li:active::after,
+.aside-list li:hover::after,
+.aside-list li:focus::after,
+.aside-list li.active::after{
+  background-color: #184D47;
+}
+.aside-list li:active::before,
+.aside-list li:hover::before,
+.aside-list li:focus::before,
+.aside-list li.active::before{
+  background-color: #184D47;
+}
+.aside-list li:active a,
+.aside-list li:hover a,
+.aside-list li:focus a{
+  color: #FFF3C7;
+}
+.aside-list li.active a{
+  color: #FAD586;
+}
+
 
 /* Footer */
 footer{
@@ -879,4 +1054,13 @@ footer{
 }
 .copyrights small{
   font-weight: 800;
+}
+
+@keyframes flow{
+  to{
+    height: 0%;
+  }
+  from{
+    height: 100%;
+  }
 }
