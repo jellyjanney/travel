@@ -256,12 +256,12 @@ header .row{
 }
 .categories > .cate-item > a figure{
   width: 100%;
-  height: 225px;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.16);
   overflow: hidden;
 }
 .categories > .cate-item > a figure img{
-  width: 225px;
+  width: auto;
 }
 .categories > .cate-item > a figcaption{
   text-align: center;
@@ -367,6 +367,10 @@ header .row{
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  height: 90vh;
+}
+.video-img figure{
+  margin-bottom: 0;
 }
 .video-img::after{
   content: "";
@@ -552,7 +556,7 @@ header .row{
 .tabel-list li figure{
   margin-bottom: 0;
   width: 50%;
-  height: 350px;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.16);
   overflow: hidden;
 }
@@ -704,9 +708,10 @@ header .row{
 .post-list li figure{
   margin-bottom: 0;
   width: 100%;
-  height: 225px;
+  height: 200px;
   background-color: rgba(0, 0, 0, 0.16);
   overflow: hidden;
+  position: relative;
 }
 .post-list li figcaption{
   padding: 20px 5px;
@@ -730,6 +735,27 @@ header .row{
   background: #FAD586;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+.post-list li.vdo figure::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgb(251, 247, 234, 0) url("../images/icon/play-white.svg") no-repeat;
+  background-size: 48px;
+  background-position: 60% 50%;
+  border: 0px solid rgb(251, 247, 234, 1);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.post-list li.vdo:hover figure::after{
+  opacity: 0.8;
 }
 
 /* Pagination */
@@ -756,6 +782,8 @@ header .row{
   padding-right: 15px;
   color: #CECECE;
   text-align: center;
+  font-weight: 300;
+  transition: all 0.3s ease;
 }
 .pagination li a .bi {
   line-height: 1;
@@ -766,6 +794,15 @@ header .row{
 .pagination li:hover a{
   color: #FFF3C7;
   opacity: 1;
+  font-weight: 400;
+}
+.pagination li.active {
+  background-color: #FFF3C7;
+}
+.pagination li.active a{
+  color: #184D47;
+  opacity: 1;
+  font-weight: 400;
 }
 .pagination li:hover{
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
