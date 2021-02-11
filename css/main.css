@@ -1130,6 +1130,7 @@ footer{
 
 #myBtn:hover {
   background-color: #FFF3C7; /* Add a dark-grey background on hover */
+  color: var(--primary);
 }
 
 
