@@ -1,13 +1,3 @@
-//  Map from Google API 
-function initMap() {
-  var map = new google.maps.Map(document.getElementById("map"), {
-    // Get latitude and longitude Location
-    center: { lat: 14.062359, lng: 100.606918 },
-    zoom: 10,
-    disableDefaultUI: true,
-  });
-}
-
 // Scroll Header fixed
 window.onscroll = function() {myFunction()};
 
@@ -23,4 +13,15 @@ function myFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+//  Map from Google API 
+function initMap() {
+  var map = new google.maps.Map(document.getElementById("map"), {
+    // Get latitude and longitude Location
+    center: { lat: 14.062359, lng: 100.606918 },
+    zoom: 10,
+    disableDefaultUI: true,
+  });
 }
