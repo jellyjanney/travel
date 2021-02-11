@@ -1,8 +1,8 @@
 // Scroll Header fixed
-window.onscroll = function() {myFunction()};
+window.onscroll = function() { scrollWindow() };
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+function scrollWindow() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("home").classList.add("sticky");
   } else {
