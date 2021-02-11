@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 
-	<script src="js/jquery-3.5.1.slim.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 	<link rel="stylesheet" href="css/main.css">
 	<title>Cuesta Garden</title>
 </head>
@@ -21,36 +22,94 @@
                 </button>
             </div> 
             <ul class="navbar">
-                <li class="nav-item"><a href="index.html" class="w3-bar-item w3-button">Home</a></li>
-                <li class="nav-item"><a href="news.html" class="w3-bar-item w3-button">News</a></li>
-                <li class="nav-item"><a href="history.html" class="w3-bar-item w3-button">History</a></li>
-                <li class="nav-item"><a href="contact.html" class="w3-bar-item w3-button">Contact</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="history.html" class="nav-link">History</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="slidebar-lang" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        EN
+                    </a>
+                    <ul aria-labelledby="slidebar-lang" class="dropdown-menu">
+                        <li class="dropdown-item" href="#">ไทย</li>
+                        <li class="dropdown-item" href="#">Zh</li>
+                    </ul>
+                </li>
             </ul>
         </ul>
     </nav>
     <!-- Header -->
     <header id="home" class="menu bg-primary">
         <!-- Navbar (sit on top) -->
-        <nav for="home" class="bg-primary nav-lg">
+        <nav for="home" class="bg-primary nav-lg nav-main">
           <div class=" display-container py-3">
               <div class="row">
-                <a href="#home" class="brand w3-text-uppercase">
+                <a href="index.html" class="brand w3-text-uppercase">
                     <b>CUESTA</b> GARDEN
                 </a> 
                 <!-- Float links to the right. Hide them on small screens -->
                 <ul class="navbar">
-                    <li class="nav-item"><a href="index.html" class="w3-bar-item w3-button">Home</a></li>
-                    <li class="nav-item"><a href="news.html" class="w3-bar-item w3-button">News</a></li>
-                    <li class="nav-item"><a href="history.html" class="w3-bar-item w3-button">History</a></li>
-                    <li class="nav-item"><a href="contact.html" class="w3-bar-item w3-button">Contact</a></li>
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                    <li class="nav-item"><a href="history.html" class="nav-link">History</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="main-lang" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            EN
+                        </a>
+                        <div aria-labelledby="main-lang" class="dropdown-menu">
+                            <a class="dropdown-item" href="#">ไทย</a>
+                            <a class="dropdown-item" href="#">Zh</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
           </div>
         </nav>
-        <nav for="mobile" class="bg-primary nav-mb">
+        <nav for="home" class="bg-white nav-lg nav-sticky">
+          <div class=" display-container py-0 px-2">
+              <div class="row">
+                <a href="index.html" class="brand w3-text-uppercase">
+                    <b>CUESTA</b> GARDEN
+                </a> 
+                <!-- Float links to the right. Hide them on small screens -->
+                <ul class="navbar">
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                    <li class="nav-item"><a href="history.html" class="nav-link">History</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="stick-lang" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            EN
+                        </a>
+                        <ul aria-labelledby="stick-lang" class="dropdown-menu">
+                            <li class="dropdown-item" href="#">ไทย</li>
+                            <li class="dropdown-item" href="#">Zh</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        <nav for="slidebar" class="bg-primary nav-mb nav-main">
           <div class=" display-container py-3">
               <div class="row">
-                <a href="#home" class="brand w3-text-uppercase">
+                <a href="index.html" class="brand w3-text-uppercase">
+                    <b>CUESTA</b> GARDEN
+                </a> 
+                <!-- Float links to the right. Hide them on small screens -->
+                <button class="nav-bar" type="button" data-toggle="modal" data-target="#slidebar"  href="javascript:()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+          </div>
+        </nav>
+        <nav for="slidebar" class="bg-white nav-mb nav-sticky">
+          <div class=" display-container py-3">
+              <div class="row">
+                <a href="index.html" class="brand w3-text-uppercase">
                     <b>CUESTA</b> GARDEN
                 </a> 
                 <!-- Float links to the right. Hide them on small screens -->
@@ -63,7 +122,6 @@
           </div>
         </nav>
     </header>
-
 <section role="main" class="main">
 	<div class="bg-white h-100 contact-section section">
 		<div class="display-container">

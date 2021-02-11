@@ -3,12 +3,12 @@ window.onscroll = function() { scrollWindow() };
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function scrollWindow() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop >= 250 || document.documentElement.scrollTop >= 250) {
     document.getElementById("home").classList.add("sticky");
-    document.getElementById("myBtn").style.display = "block";
+    document.getElementById("btt").style.display = "block";
   } else {
     document.getElementById("home").classList.remove("sticky");
-    document.getElementById("myBtn").style.display = "none";
+    document.getElementById("btt").style.display = "none";
   }
 }
 // When the user clicks on the button, scroll to the top of the document
@@ -27,3 +27,8 @@ function initMap() {
     disableDefaultUI: true,
   });
 }
+
+$('#pills-tab a').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+})
