@@ -5,8 +5,10 @@ window.onscroll = function() { scrollWindow() };
 function scrollWindow() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("home").classList.add("sticky");
+    document.getElementById("myBtn").style.display = "block";
   } else {
     document.getElementById("home").classList.remove("sticky");
+    document.getElementById("myBtn").style.display = "none";
   }
 }
 // When the user clicks on the button, scroll to the top of the document
