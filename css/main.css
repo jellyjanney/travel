@@ -1124,6 +1124,8 @@ footer{
   border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
   border: 1px solid #FBF7EA;
+  height: 45px;
+  line-height: 0;
 }
 
 #myBtn:hover {
