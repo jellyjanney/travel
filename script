@@ -1,0 +1,22 @@
+/* Map from Google API */
+function initMap() {
+  var map = new google.maps.Map(document.getElementById("map"), {
+    // Get latitude and longitude Location
+    center: { lat: 14.062359, lng: 100.606918 },
+    zoom: 10,
+    disableDefaultUI: true,
+  });
+}
+
+// Scroll Header fixed
+window.onscroll = function() {myFunction()};
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > document.getElementById("main").offsetTop) {
+    document.getElementById("headSection").classList.add("sticky");
+  } else {
+    document.getElementById("headSection").classList.remove("sticky");
+  }
+}
+
