@@ -8,6 +8,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.css">
 	<title>Cuesta Garden</title>
 </head>
@@ -126,48 +127,43 @@
 	<div class="bg-green h-100 section">
 		<div class="display-container">
 			<div id="travel-guide" class="list-group">
-				<a class="list-group-item list-group-item-action active" href="guide.html">Travel Guide</a>
-				<a class="list-group-item list-group-item-action" href="product.html">Food/Product</a>
-				<a class="list-group-item list-group-item-action" href="active.html">Active</a>
-				<a class="list-group-item list-group-item-action" href="access.html">Access</a>
+				<a class="list-group-item list-group-item-action animate__bounceIn active" href="guide.html">Travel Guide</a>
+				<a class="list-group-item list-group-item-action animate__bounceIn" href="product.html">Food/Product</a>
+				<a class="list-group-item list-group-item-action animate__bounceIn" href="active.html">Active</a>
+				<a class="list-group-item list-group-item-action animate__bounceIn" href="access.html">Access</a>
 			</div>
-			<figure class="map_img">
-				<img src="images/map_sample.jpg" usemap="#image-map">
-				<map name="image-map">
-					<area id="point_1" href="#point_1" coords="274,527,298,503,311,461,288,432,264,437,250,450,245,477,256,501" shape="poly">
-					<area id="point_2" href="#point_2" coords="1509,903,1483,861,1480,824,1501,803,1528,808,1544,840,1525,874,1517,893" shape="poly">
-					<area id="point_3" href="#point_3" coords="2813,691,2781,654,2779,615,2805,596,2837,596,2845,636" shape="poly">
-				</map>
+			<figure class="map_img animate__animated animate__pulse">
+				<img src="images/map_sample.jpg">
 			</figure>
 			<figcaption data-spy="scroll" data-target="#travel-guide" data-offset="0" class="scrollspy-example">
-				<div id="point-1" class="point-container h-100">
+				<div id="point-1" class="point-container h-100 show-on-scroll">
 					<h4>Mark point 1</h4>
 				  	<ul class="point-list flex-row">
-				  		<li>
+				  		<li class=" animate__animated animate__pulse">
 				  			<a href="detail.html">
 					  			<figure><img src="images/thumbnail_008.jpg"></figure>
 					  			<figcaption><h3>สวนกังหันลม</h3></figcaption>
 					  		</a>
 					  	</li>
-				  		<li>
+				  		<li class=" animate__animated animate__pulse">
 				  			<a href="detail.html">
 					  			<figure><img src="images/thumbnail_009.jpg"></figure>
 					  			<figcaption><h3>สวนดอกไม้ฤดูหนาว</h3></figcaption>
 					  		</a>
 					  	</li>
-				  		<li>
+				  		<li class=" animate__animated animate__pulse">
 				  			<a href="detail.html">
 					  			<figure><img src="images/thumbnail_001.jpg"></figure>
 					  			<figcaption><h3>อุโมงต้นไม้</h3></figcaption>
 					  		</a>
 					  	</li>
-				  		<li>
+				  		<li class=" animate__animated animate__pulse">
 				  			<a href="detail.html">
 					  			<figure><img src="images/thumbnail_007.jpg"></figure>
 					  			<figcaption><h3>อุโมงดอกไม้</h3></figcaption>
 					  		</a>
 					  	</li>
-				  		<li>
+				  		<li class=" animate__animated animate__pulse">
 				  			<a href="detail.html">
 					  			<figure><img src="images/thumbnail_006.jpg"></figure>
 					  			<figcaption><h3>สวนสาธารณะ</h3></figcaption>
@@ -175,34 +171,34 @@
 					  	</li>
 				  	</ul>
 				</div>
-				<div id="point-2" class="point-container h-100">
+				<div id="point-2" class="point-container h-100 show-on-scroll">
 					<h4>สถานที่ 2</h4>
 				  	<ul class="point-list flex-row">
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_008.jpg"></figure>
 								<figcaption><h3>สวนกังหันลม</h3></figcaption>
 							</a>
 						</li>
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_009.jpg"></figure>
 								<figcaption><h3>สวนดอกไม้ฤดูหนาว</h3></figcaption>
 							</a>
 						</li>
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_001.jpg"></figure>
 								<figcaption><h3>อุโมงต้นไม้</h3></figcaption>
 							</a>
 						</li>
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_007.jpg"></figure>
 								<figcaption><h3>อุโมงดอกไม้</h3></figcaption>
 							</a>
 						</li>
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_006.jpg"></figure>
 								<figcaption><h3>สวนสาธารณะ</h3></figcaption>
@@ -210,34 +206,34 @@
 						</li>
 				  	</ul>
 				</div>
-				<div id="point-3" class="point-container h-100">
+				<div id="point-3" class="point-container h-100 show-on-scroll">
 					<h4>สถานที่ 3</h4>
 				  	<ul class="point-list flex-row">
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_008.jpg"></figure>
 								<figcaption><h3>สวนกังหันลม</h3></figcaption>
 							</a>
 						</li>
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_009.jpg"></figure>
 								<figcaption><h3>สวนดอกไม้ฤดูหนาว</h3></figcaption>
 							</a>
 						</li>
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_001.jpg"></figure>
 								<figcaption><h3>อุโมงต้นไม้</h3></figcaption>
 							</a>
 						</li>
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_007.jpg"></figure>
 								<figcaption><h3>อุโมงดอกไม้</h3></figcaption>
 							</a>
 						</li>
-						<li>
+						<li class=" animate__animated animate__pulse">
 							<a href="detail.html">
 								<figure><img src="images/thumbnail_006.jpg"></figure>
 								<figcaption><h3>สวนสาธารณะ</h3></figcaption>
@@ -343,6 +339,8 @@
 		</div>
 	</div>
 </footer>
-
+	
+<button onclick="topFunction()" id="btt" title="Go to top"><i class="bi bi-arrow-up-short"></i></button>
+<script src="js/script.js"></script>
 </body>
 </html>

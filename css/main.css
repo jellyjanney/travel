@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url("animate.css");
 
 *{
   -webkit-user-select: none;
@@ -44,6 +45,7 @@ a{
   text-decoration: none !important;
   outline: none;
   transition: all 0.3s ease;
+  background: rgba(255, 243, 199, 0);
 }
 a:active,
 a:focus,
@@ -51,6 +53,7 @@ a:hover{
   text-decoration: none !important;
   outline: none;
   opacity: 0.8;
+  background: rgba(255, 243, 199, 0);
 }
 
 .display-container{
@@ -348,7 +351,7 @@ header .row{
 }
 .categories > .cate-item > a{
   width: 100%;
-  height: 338px;
+  height: auto;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
   border: 1px solid #707070;
   background-color: rgba(24, 77, 71, 0.04);
@@ -470,12 +473,16 @@ header .row{
   overflow: hidden;
   height: 90vh;
 }
+.video-img iframe{
+  width: 100vw;
+  height: 90vh;
+}
 .video-img figure{
   margin-bottom: 0;
 }
 .video-img::after{
   content: "";
-  display: block;
+  display: none;
   width: 60px;
   height: 60px;
   position: absolute;
@@ -493,6 +500,18 @@ header .row{
 }
 .video-img:hover::after{
   background-color: #FFF3C7;
+}
+.video-img iframe .ytp-large-play-button{
+  width: 48px;
+  height: 48px;
+  border: 2px solid;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.video-img iframe svg .ytp-large-play-button-bg{
+  fill: rgba(33, 33, 33, 0) !important;
+  fill-opacity: .8;
+  height: 48px;
 }
 .list-group{
   flex-direction: row;
@@ -541,9 +560,10 @@ header .row{
   width: 100%;
   height: 500px;
   background-color: rgba(0, 0, 0, 0.16);
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0;
+  padding-right: 0;
   position: relative;
+  overflow: hidden;
 }
 .point-container{
   padding-left: 15px;
@@ -583,8 +603,8 @@ header .row{
   height: 100%;
 }
 .point-list li figure{
-  margin-bottom: 0;
-  width: 100%;
+  margin: 30px auto 0;
+  width: 80%;
   height: auto;
   background-color: rgba(0, 0, 0, 0.16);
   overflow: hidden;
@@ -597,6 +617,7 @@ header .row{
   color: rgba(251, 247, 234, 1);
   padding: 15px 10px;
   margin-top: 0.5em;
+  margin-bottom: 15px;
 }
 .point-container h4::after{
   content: "";
@@ -1369,54 +1390,19 @@ article .title::after{
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-.map_img{
-  overflow: hidden;
-  padding: 0;
-  user-select: none !important;
-  margin: 0;
-  height: auto;
-  position: relative;
-}
-.map_img img{
-  width: 100%;
-}
-.map_img map {
-  width: 100%;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-.map_img map area {
-  position: absolute;
-  top: auto;
-  left: auto;
-  right: auto;
-  bottom: auto;
-  border: 1px solid;
-  height: 40px;
-  width: 26px;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 100%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  cursor: pointer;
-}
-.map_img map area#point_1 {
-  position: absolute;
-  top: 167px;
-  left: 93px;
-}
-.map_img map area#point_2 {
-  right: 421px;
-  top: 54px;
-}
-.map_img map area#point_3 {
-  right: 60px;
-  top: 230px;
-}
 
+.show-on-scroll{
+  opacity: 0;
+  transition: all 0.123s ease-in-out;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.show-on-scroll.is-visible {
+  opacity: 1;
+  transition: all 0.123s ease-in-out;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
 
 @keyframes flow{
   to{
@@ -1437,7 +1423,7 @@ article .title::after{
   .nav-mb{
     display: none;
   }
-  .main{
+  .main:not(.body){
     margin-top: -100px;
   }
 }
