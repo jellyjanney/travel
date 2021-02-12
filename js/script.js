@@ -19,19 +19,19 @@ function topFunction() {
 
 
 //  Map from Google API 
-function initMap() {
+/*function initMap() {
   var map = new google.maps.Map(document.getElementById("map_main"), {
-    // Get latitude and longitude Location
+    / Get latitude and longitude Location
     center: { lat: 14.062359, lng: 100.606918 },
     zoom: 10,
     disableDefaultUI: true,
   });
-  // The marker, positioned at Uluru
+  / The marker, positioned at Uluru
   var marker = new google.maps.Marker({
     position: uluru,
     map: map,
   });
-}
+}*/
 
 $('#pills-tab a').on('click', function (e) {
     e.preventDefault()

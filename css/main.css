@@ -1241,7 +1241,7 @@ textarea.form-control:focus{
   display: block;
   z-index: 3;
   position: relative;
-  margin: 5px 0;
+  margin: 5px;
 }
 .nav-pills > .nav-link::after{
   content: "";
@@ -1686,6 +1686,7 @@ article .title::after{
   }
   h4, .h4{
     font-size: 1.05rem !important;
+    margin-bottom: 15px;
   }
   h5, .h5{
     font-size: 1rem !important;
