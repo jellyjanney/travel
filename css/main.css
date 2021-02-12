@@ -1520,24 +1520,24 @@ article .title::after{
   color: #184D47;
 }
 .link-map:nth-child(1) {
-  top: 162px;
-  left: 82px;
+  top: 41%;
+  left: 11%;
 }
 .link-map:nth-child(2) {
-  top: 183px;
-  left: 377px;
+  top: 29%;
+  left: 33%;
 }
 .link-map:nth-child(3) {
-  top: 304px;
-  left: 558px;
+  top: 55%;
+  left: 47%;
 }
 .link-map:nth-child(4) {
-  top: 48px;
-  right: 409px;
+  top: 4%;
+  right: 35%;
 }
 .link-map:nth-child(5) {
-  top: 224px;
-  right: 49px;
+  top: 40%;
+  right: 2%;
 }
 .point-container{
   scroll-padding: 350px 0 ;
