@@ -3,7 +3,7 @@ window.onscroll = function() { scrollWindow() };
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function scrollWindow() {
-  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("home").classList.add("sticky");
     document.getElementById("btt").style.display = "block";
   } else {
@@ -79,3 +79,10 @@ function isElementInViewport(el) {
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
   );
 }
+
+$(function(){
+  $(".link-map").click(function(){
+    $($(this).attr('href')).scrollTop(-500);
+  });
+  $('.link-map').tooltip(options);
+});

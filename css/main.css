@@ -1490,6 +1490,59 @@ article .title::after{
   animation-name: fadeIn;
 }
 
+.map_img{
+  position: relative;
+  z-index: 1;
+}
+.map_img map{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.map_img map .link-map{
+  border: 0px solid #ff0000;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: block;
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  font-size: 47px;
+  line-height: 0;
+  text-align: center;
+  color: #FAD586;
+}
+.map_img map .link-map:hover{
+  color: #184D47;
+}
+.link-map:nth-child(1) {
+  top: 162px;
+  left: 82px;
+}
+.link-map:nth-child(2) {
+  top: 183px;
+  left: 377px;
+}
+.link-map:nth-child(3) {
+  top: 304px;
+  left: 558px;
+}
+.link-map:nth-child(4) {
+  top: 48px;
+  right: 409px;
+}
+.link-map:nth-child(5) {
+  top: 224px;
+  right: 49px;
+}
+.point-container{
+  scroll-padding: 350px 0 ;
+}
+
 @keyframes flow{
   to{
     height: 0%;
@@ -1779,6 +1832,10 @@ article .title::after{
   }
   .aside-list li::after{
     width: 92%;
+  }
+  .section{
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 }
 @media (max-width: 480px){
