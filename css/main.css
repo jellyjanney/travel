@@ -1585,7 +1585,7 @@ article .title::after{
   }
   .nav-bar {
     background: rgba(0,0,0,0);
-    border: 2px solid #fff;
+    border: 0px solid #fff;
     border-radius: 4px;
     overflow: hidden;
     display: block;
