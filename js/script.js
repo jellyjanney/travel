@@ -3,13 +3,13 @@ window.onscroll = function() { scrollWindow() };
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function scrollWindow() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80) {
     document.getElementById("home").classList.add("sticky");
     document.getElementById("btt").style.display = "block";
   } else {
     document.getElementById("home").classList.remove("sticky");
     document.getElementById("btt").style.display = "none";
-  }
+  } 
 }
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
