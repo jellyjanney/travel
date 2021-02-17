@@ -3,9 +3,15 @@ window.onscroll = function() { scrollWindow() };
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function scrollWindow() {
-  if (document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80) {
+  if ((document.body.scrollTop || document.documentElement.scrollTop) >= 50) {
     document.getElementById("home").classList.add("sticky");
     document.getElementById("btt").style.display = "block";
+  } else if ((document.body.scrollTop || document.documentElement.scrollTop) === 50){
+    document.getElementById("home").classList.add("sticky");
+    document.getElementById("btt").style.display = "block";
+  } else if ((document.getElementById("btt").pageYOffset || document.getElementById("btt").pageYOffset) <= 145){
+    document.getElementById("home").classList.remove("sticky");
+    document.getElementById("btt").style.display = "none";
   } else {
     document.getElementById("home").classList.remove("sticky");
     document.getElementById("btt").style.display = "none";
