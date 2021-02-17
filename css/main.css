@@ -56,6 +56,7 @@ a:hover{
   text-decoration: none !important;
   outline: none;
   opacity: 0.8;
+  color: #FAD586;
   background: rgba(255, 243, 199, 0);
 }
 
@@ -1863,6 +1864,25 @@ article .title::after{
   .main:not(.body){
     /*margin-top: -100px;*/
   }
+  .dropdown-toggle{
+    margin-right: 0;
+    -webkit-transition: none;
+            transition: none;
+  }
+  .dropdown-toggle::after{
+    vertical-align: middle;
+    margin-top: auto;
+    line-height: 2;
+    height: 2px;
+    margin-left: 5px;
+    margin-bottom: auto;
+    color: #FBF7EA;
+  }
+  .dropdown-toggle::after:active,
+  .dropdown-toggle::after:focus,
+  .dropdown-toggle::after:hover{
+    color: #FAD586;
+  }
 }
 @media (max-width: 1024px){
   .nav-mb{
@@ -1962,8 +1982,64 @@ article .title::after{
             flex: 0 0 100%;
     margin: 5px;
   }
-  .nav-link{
+  .nav-link {
     color: #FBF7EA;
+    -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+  }
+  .nav-item.dropdown.show {
+    display: inline-flex;
+    flex-direction: row;
+  }
+  .nav-item.dropdown.show .nav-link {
+    display: inline-flex;
+    flex: 0 0 auto;
+    width: auto;
+    margin-right: 15px;
+  }
+  .nav-item.dropdown.show .nav-link:active,
+  .nav-item.dropdown.show .nav-link:focus {
+    color: #FAD586;
+  }
+  .nav-item.dropdown.show .dropdown-menu.show {
+    display: flex;
+    position: relative;
+    background: transparent;
+    border: 0;
+    padding: 2.5px 0;
+  }
+  .nav-item.dropdown.show .dropdown-menu .dropdown-item {
+    color: #FBF7EA;
+    border-right: 1px solid #406A65;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  }
+  .nav-item.dropdown.show .dropdown-menu .dropdown-item:last-child{
+    border-right-width: 0;
+  }
+  .nav-item.dropdown.show .dropdown-menu .dropdown-item a {
+    color: #FBF7EA;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+  }
+  .dropdown-toggle::after{
+    vertical-align: middle;
+    margin-top: auto;
+    line-height: 2;
+    height: 2px;
+    margin-left: 5px;
+    margin-bottom: auto;
+  }
+  .dropdown-toggle::after:active,
+  .dropdown-toggle::after:focus,
+  .dropdown-toggle::after:hover{
+    color: #FAD586;
+  }
+  .nav-item.dropdown.show .dropdown-menu .dropdown-item:active,
+  .nav-item.dropdown.show .dropdown-menu .dropdown-item:focus,
+  .nav-item.dropdown.show .dropdown-menu .dropdown-item a:active,
+  .nav-item.dropdown.show .dropdown-menu .dropdown-item a:focus {
+    color: #FAD586;
   }
   #slidebar .bg-dark{
     background: rgba(24, 77, 71, 0.8) !important;
