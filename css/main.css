@@ -2000,6 +2000,29 @@ article .title::after{
   animation-fill-mode: both;
 }
 
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px){
 
 }
