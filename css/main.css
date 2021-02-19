@@ -261,11 +261,15 @@ header .row{
   content: "";
   display: block;
   width: 0%;
-  height: 2px;
-  background-color: #406A65;
+  height: 0;
+  background-color: #FFF3C7;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  margin: auto;
 }
 .nav-sticky .navbar > .nav-item:active > a,
 .nav-sticky .navbar > .nav-item:focus > a,
@@ -2015,7 +2019,7 @@ article .title::after{
     height: 2px;
     margin-left: 5px;
     margin-bottom: auto;
-    color: #FBF7EA;
+    color: #406A65;
   }
   .dropdown-toggle::after:active,
   .dropdown-toggle::after:focus,
