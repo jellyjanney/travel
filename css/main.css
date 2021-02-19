@@ -261,7 +261,7 @@ header .row{
   content: "";
   display: block;
   width: 0%;
-  height: 0;
+  height: 2px;
   background-color: #406A65;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -453,6 +453,12 @@ header .row{
   background-color: rgba(24, 77, 71, 0.64);
   color: #FFF3C7;
   opacity: 1;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .socail{
   display: -webkit-inline-box;
@@ -572,6 +578,12 @@ header .row{
 }
 .footer ul li a:hover{
   padding-left: 10px;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .video-img{
   position: relative;
@@ -655,6 +667,12 @@ header .row{
 .list-group .list-group-item:hover{
   color: #FFF3C7;
   font-weight: 500;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .list-group-item::after{
   content: "";
@@ -671,6 +689,12 @@ header .row{
 .list-group-item:focus::after,
 .list-group-item:hover::after {
   width: 100%;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .list-group-item.active:hover::after{
   width: calc(100% - 20%);
@@ -765,6 +789,16 @@ header .row{
   background: #FAD586;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+.point-list li:active,
+.point-list li:focus,
+.point-list li:hover{
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .tabel-container{
@@ -952,6 +986,12 @@ header .row{
 .list-col a:active{
   color: rgba(255, 243, 199, 1);
   opacity: 1;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .access-page figure{
   max-height: 1500px;
@@ -1021,6 +1061,12 @@ header .row{
 .post-list li:hover{
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.16);
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .post-list li a{
   display: block;
@@ -1147,6 +1193,12 @@ header .row{
 .pagination li:hover{
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 /* Contact */
@@ -1157,6 +1209,12 @@ header .row{
 .contact-section .socail > li:focus,
 .contact-section .socail > li:hover{
   background-color: #FAD586;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .contact-section .title{
   padding: 60px 0 25px;
@@ -1290,6 +1348,12 @@ textarea.form-control:focus{
 .btn-green:hover{
   opacity: 1;
   color: #FAD586 !important;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 /* Timeline */
@@ -1447,6 +1511,7 @@ textarea.form-control:focus{
   display: block;
   z-index: 2;
   position: relative;
+  padding-right: 35px;
 }
 .aside-list li::after{
   content: "";
@@ -1471,7 +1536,7 @@ textarea.form-control:focus{
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  z-index: 1;
+  z-index: 0;
 }
 .aside-list li:active::after,
 .aside-list li:hover::after,
@@ -1489,6 +1554,12 @@ textarea.form-control:focus{
 .aside-list li:hover a,
 .aside-list li:focus a{
   color: #FFF3C7;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .aside-list li.active a{
   color: #FAD586;
@@ -1552,6 +1623,12 @@ textarea.form-control:focus{
 .nav-pills > .nav-link:hover ,
 .nav-pills > .nav-link:focus {
   color: #FFF3C7;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .nav-pills > .nav-link.active {
   color: #FAD586;
@@ -1617,6 +1694,12 @@ footer{
 #btt:hover {
   background-color: #FFF3C7; 
   color: #184D47;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 article .title::after{
@@ -1709,6 +1792,12 @@ article .title::after{
 .nav-tabs li:hover a,
 .nav-tabs li:focus a{
   color: #FFF3C7;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .nav-tabs li a.active{
   color: #FAD586;
@@ -1729,6 +1818,12 @@ article .title::after{
 .btn-link:hover {
   color: #184D47;
   text-decoration: none;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .accordion > .card{
   border-color: #FAD586;
@@ -1808,6 +1903,12 @@ article .title::after{
 }
 .map_img map .link-map:hover{
   color: #184D47;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .link-map:nth-child(1) {
   top: 41%;
@@ -1849,6 +1950,44 @@ article .title::after{
   from{
     height: 100%;
   }
+}
+
+/* Zooming entrances */
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1.015, 1.015, 1.015);
+    transform: scale3d(1.015, 1.015, 1.015);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1.015, 1.015, 1.015);
+    transform: scale3d(1.015, 1.015, 1.015);
+  }
+}
+.animate__zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+.animate__animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @media (max-width: 1200px){
