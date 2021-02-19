@@ -192,6 +192,12 @@ header .row{
 }
 .dropdown-menu{
   min-width: auto;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .dropdown-menu .dropdown-item:hover{
   background-color: #FBF7EA;
