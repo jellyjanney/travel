@@ -305,7 +305,7 @@ header .row{
 }
 
 .sticky .nav-main{
-  display: none;
+  /*display: none;*/
 }
 .sticky .nav-sticky{
   top: 0;
