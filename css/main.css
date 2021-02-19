@@ -310,7 +310,7 @@ header .row{
 .sticky .nav-sticky{
   top: 0;
 }
-.sticky .nav-main .navbar > .nav-item > a::before{
+.nav-sticky .dropdown-toggle::after {
   color: #406A65;
 }
 
@@ -2052,6 +2052,9 @@ article .title::after{
     margin-left: 5px;
     margin-bottom: auto;
     color: #FBF7EA;
+  }
+  .nav-sticky .dropdown-toggle::after {
+    color: #406A65;
   }
   .dropdown-toggle::after:active,
   .dropdown-toggle::after:focus,
