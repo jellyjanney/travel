@@ -329,7 +329,7 @@ header .row{
 .carousel-item.active h5,
 .carousel-item.active p{
   color: #FFF3C7;
-  text-shadow: 0px 3px 10px rgb(0,0,0,0.26);
+  text-shadow: 0px 0px 3px rgb(0,0,0,0.99);
 }
 .carousel-item-next h1,
 .carousel-item-next h5,
@@ -366,13 +366,22 @@ header .row{
   border-radius: 30px;
   border: 0;
   line-height: 2.2;
-  -webkit-transition: all 0.3s ease;
+  /*-webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;*/
 }
+.btn-primary:active,
+.btn-primary:focus,
 .btn-primary:hover{
-  background: #FFF3C7;
-  opacity: 0.8;
+  background: #FAD586;
+  color: #FBF7EA;
+  opacity: 1;
+}
+.btn-primary:not(:disabled):not(.disabled):active, 
+.btn-primary:not(:disabled):not(.disabled).active, 
+.show > .btn-primary.dropdown-toggle{
+  background: #FAD586;
+  color: #FBF7EA;
 }
 
 /****** Main *******/
@@ -466,12 +475,7 @@ header .row{
   background-color: rgba(24, 77, 71, 0.64);
   color: #FFF3C7;
   opacity: 1;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  padding: 15px;
 }
 .socail{
   display: -webkit-inline-box;
@@ -522,6 +526,15 @@ header .row{
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  transition: all 0.3s;
+}
+.socail > li:hover{
+  border-color: #FAD586;
+}
+.socail > li > a:hover svg{
+  width: 22px;
+  height: 22px;
+  color: #FBF7EA;
 }
 .contact-section h1,
 .contact-section h2,
@@ -591,12 +604,10 @@ header .row{
 }
 .footer ul li a:hover{
   padding-left: 10px;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .video-img{
   position: relative;
@@ -680,12 +691,10 @@ header .row{
 .list-group .list-group-item:hover{
   color: #FFF3C7;
   font-weight: 500;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .list-group-item::after{
   content: "";
@@ -702,12 +711,10 @@ header .row{
 .list-group-item:focus::after,
 .list-group-item:hover::after {
   width: 100%;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .list-group-item.active:hover::after{
   width: calc(100% - 20%);
@@ -756,7 +763,7 @@ header .row{
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 30px;
-  background: rgb(61 105 100);
+  background: rgb(61, 105, 100);
   -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.16);
   border: 1px solid rgba(112, 112, 112, 1);
@@ -768,21 +775,22 @@ header .row{
   display: block;
   width: 100%;
   height: 100%;
+  padding: 30px;
 }
 .point-list li figure{
-  margin: 30px auto 0;
-  width: 80%;
+  margin: 0 auto;
+  width: auto;
   height: auto;
   background-color: rgba(0, 0, 0, 0.16);
   overflow: hidden;
 }
 .point-list li figcaption{
-  padding-top: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 15px;
-  margin-top: 0.5em;
-  margin-bottom: 15px;
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .point-list li figcaption h3{
   font-size: 18px;
@@ -803,15 +811,11 @@ header .row{
   margin-top: 15px;
   margin-bottom: 30px;
 }
-.point-list li:active,
-.point-list li:focus,
-.point-list li:hover{
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+.point-list li:active a,
+.point-list li:focus a,
+.point-list li:hover a{
+  padding: 28px;
+  opacity: 1;
 }
 
 .tabel-container{
@@ -842,18 +846,20 @@ header .row{
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
   height: 100%;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
-  background: rgb(255 255 255);
+  background: rgb(255, 255, 255);
   border: 0px solid rgba(112, 112, 112, 1);
   opacity: 1;
   backdrop-filter: blur(31px);
   -webkit-backdrop-filter: blur(31px);
   padding: 15px;
   overflow: hidden;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 0.3s;
 }
 .tabel-list li:nth-child(2n+1){
   -webkit-box-orient: horizontal;
@@ -863,7 +869,6 @@ header .row{
 }
 .tabel-list li:last-child{
   margin-bottom: 0;
-  padding-bottom: 0;
 }
 .tabel-list li a{
   display: inline-block;
@@ -883,6 +888,7 @@ header .row{
   color: #FFFFFF !important;
   background-color: #96BB7C !important;
   margin-bottom: 20px;
+  transition: all 0.3s;
 }
 .tabel-list li figure{
   margin-bottom: 0;
@@ -926,7 +932,9 @@ header .row{
 .tabel-container h2{
   text-align: center;
   margin-bottom: 20px;
-
+}
+.tabel-list li:hover{
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
 }
 .opening-box{
   text-align: center;
@@ -958,6 +966,11 @@ header .row{
 }
 .tabel-list li figcaption .opening-list li span{
   color: #FFF3C7;
+}
+.tabel-list li a:active,
+.tabel-list li a:focus,
+.tabel-list li a:hover{
+  background-color: #184D47 !important;
 }
 .list-col{
   width: 25%;
@@ -999,16 +1012,17 @@ header .row{
 .list-col a:active{
   color: rgba(255, 243, 199, 1);
   opacity: 1;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .access-page figure{
   max-height: 1500px;
   overflow: hidden;
+}
+.access-page .tabel-list li ol{
+  margin-bottom: 0.5rem;
 }
 .access-page .tabel-list li ol li{
   -webkit-box-orient: horizontal !important;
@@ -1019,6 +1033,7 @@ header .row{
   padding-left: 0;
   margin-bottom: 0;
   padding-bottom: 0;
+  box-shadow: none;
 }
 .map{
   width: 100%;
@@ -1052,40 +1067,32 @@ header .row{
   margin-left: -15px;
   margin-right: -15px;
 }
-.post-list li{
+.post-list li {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 30.3333%;
-          flex: 0 0 30.3333%;
-  width: 30.3333%;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 30px;
-  background: rgba(255, 255, 255, 1);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
+      -ms-flex: 0 0 33.3333%;
+          flex: 0 0 33.3333%;
+  width: 33.3333%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
   border: 0px solid #FBF7EA;
   opacity: 1;
-  backdrop-filter: blur(31px);
-  -webkit-backdrop-filter: blur(31px);
+  padding: 15px;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-.post-list li:hover{
-  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.16);
-  -webkit-animation-name: zoomIn;
-          animation-name: zoomIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }
 .post-list li a{
   display: block;
   width: 100%;
   height: 100%;
   color: #000000;
+  background: rgba(255, 255, 255, 1);
+  -webkit-backdrop-filter: blur(31px);
+          backdrop-filter: blur(31px);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(15, 14, 14, 0.16);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
+  transition: all 0.3s ease-in-out;
 }
 .post-list li figure{
   margin-bottom: 0;
@@ -1143,6 +1150,11 @@ header .row{
 }
 .post-list li.vdo:hover figure::after{
   opacity: 0.8;
+}
+.post-list li:hover a{
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.16);
+          box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.16);
+  opacity: 1;
 }
 
 /* Pagination */
@@ -1206,12 +1218,10 @@ header .row{
 .pagination li:hover{
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
-  -webkit-animation-name: zoomIn;
-          animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }
 
 /* Contact */
@@ -1222,12 +1232,10 @@ header .row{
 .contact-section .socail > li:focus,
 .contact-section .socail > li:hover{
   background-color: #FAD586;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .contact-section .title{
   padding: 60px 0 25px;
@@ -1361,12 +1369,10 @@ textarea.form-control:focus{
 .btn-green:hover{
   opacity: 1;
   color: #FAD586 !important;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 
 /* Timeline */
@@ -1567,12 +1573,10 @@ textarea.form-control:focus{
 .aside-list li:hover a,
 .aside-list li:focus a{
   color: #FFF3C7;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .aside-list li.active a{
   color: #FAD586;
@@ -1594,11 +1598,13 @@ textarea.form-control:focus{
   z-index: 3;
   position: relative;
   margin: 5px;
+  padding-left: 10px;
+  padding-right: 20px;
 }
 .nav-pills > .nav-link::after{
   content: "";
   display: block;
-  width: 90%;
+  width: 89%;
   height: 100%;
   background-color: rgba(251, 247, 234, 1);
   position: absolute;
@@ -1610,15 +1616,15 @@ textarea.form-control:focus{
   content: "";
   display: block;
   width: 29px;
-  height: 28px;
+  height: 29px;
   background-color: rgba(251, 247, 234, 1);
   position: absolute;
   top: 6px;
-  right: 12px;
+  right: 13px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  z-index: 1;
+  z-index: -1;
 }
 .nav-pills > .nav-link:active::after,
 .nav-pills > .nav-link:hover::after,
@@ -1636,12 +1642,10 @@ textarea.form-control:focus{
 .nav-pills > .nav-link:hover ,
 .nav-pills > .nav-link:focus {
   color: #FFF3C7;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .nav-pills > .nav-link.active {
   color: #FAD586;
@@ -1707,12 +1711,10 @@ footer{
 #btt:hover {
   background-color: #FFF3C7; 
   color: #184D47;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 
 article .title::after{
@@ -1805,12 +1807,10 @@ article .title::after{
 .nav-tabs li:hover a,
 .nav-tabs li:focus a{
   color: #FFF3C7;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .nav-tabs li a.active{
   color: #FAD586;
@@ -1831,12 +1831,10 @@ article .title::after{
 .btn-link:hover {
   color: #184D47;
   text-decoration: none;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .accordion > .card{
   border-color: #FAD586;
@@ -1916,12 +1914,10 @@ article .title::after{
 }
 .map_img map .link-map:hover{
   color: #184D47;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+  /*-webkit-animation-name: zoomIn;
+          animation-name: zoomIn;*/
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-duration: 1s;
 }
 .link-map:nth-child(1) {
   top: 41%;
@@ -1968,28 +1964,22 @@ article .title::after{
 /* Zooming entrances */
 @-webkit-keyframes zoomIn {
   from {
-    opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   to {
-    opacity: 1;
-    -webkit-transform: scale3d(1.015, 1.015, 1.015);
-    transform: scale3d(1.015, 1.015, 1.015);
+    -webkit-transform: scale3d(1.0125, 1.0125, 1.0125);
+    transform: scale3d(1.0125, 1.0125, 1.0125);
   }
 }
 @keyframes zoomIn {
   from {
-    opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   to {
-    opacity: 1;
-    -webkit-transform: scale3d(1.015, 1.015, 1.015);
-    transform: scale3d(1.015, 1.015, 1.015);
+    -webkit-transform: scale3d(1.0125, 1.0125, 1.0125);
+    transform: scale3d(1.0125, 1.0125, 1.0125);
   }
 }
 .animate__zoomIn {
